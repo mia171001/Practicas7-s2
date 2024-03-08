@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <p>
+      <strong>Grillas:</strong> Imagina las grillas como una especie de
+      estructura que divide la página en filas y columnas, creando secciones
+      donde podemos colocar nuestro contenido. Esto nos ayuda a organizar todo
+      de manera ordenada, como dividir una hoja de papel en secciones para
+      escribir diferentes cosas.
+      <br />
+      <strong>Columnas:</strong> Dentro de esas filas, tenemos columnas que
+      actúan como los espacios donde colocamos nuestro contenido. Piensa en
+      ellas como bloques que ocupan cierta cantidad de espacio en la página. Con
+      las columnas, podemos decidir cuánto espacio ocupa cada parte de nuestro
+      contenido, lo que nos permite diseñar la página de manera flexible y
+      adaptativa.
+      <br />
+      <strong>Media Queries:</strong> Son como instrucciones especiales que le
+      damos a nuestra página para que se adapte a diferentes dispositivos y
+      tamaños de pantalla. Con las media queries, podemos decirle a la página
+      cómo debe comportarse en teléfonos móviles, tabletas o computadoras de
+      escritorio, asegurándonos de que se vea bien en cualquier dispositivo.
+      <br />
+      <strong>Container:</strong> El contenedor es como el marco principal de
+      nuestra página, es decir, el espacio donde ocurre toda la magia. Todo el
+      contenido importante debe estar dentro de este contenedor para mantenerlo
+      organizado y centrado en la pantalla.
+      <br />
+      <strong>Row y Col:</strong> Las filas y columnas trabajan juntas para
+      organizar el contenido dentro del contenedor. Las filas agrupan las
+      columnas y aseguran que estén alineadas correctamente, creando una
+      estructura visualmente atractiva y fácil de leer para los usuarios.
+    </p>
+    <div class="container-fluid border border-success">
+      <p>
+        Se puese usar <b>container-fluid</b> para usar todo el espacio de la
+        pantalla en todas las medidas.
+      </p>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="row border border-dark">
+        <p>
+          los <b>row</b> crean filas donde podemos poner columnas, con un
+          espacio maximo de 12 columnas
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-6 border border-danger">.col-6</div>
+        <div class="col-4 border border-danger">.col-4</div>
+        <div class="col-6 border border-danger">.col-6</div>
+        <p>
+          Si las columnas que colocamos ocupan mas de los 12 espacios
+          disponibles se pondra debajo. <br />
+          Ademas tenemos la opcion de poner los tamaños de las columnas se gunla
+          resolucion de la pantalla
+        </p>
+        <div class="row">
+          <div
+            class="border border-success col-xs-11 col-sm-9 col-md-4 col-lg-6 col-xl-10 col-xxl-1"
+          >
+            Estas columnas cambiaran
+          </div>
+          <div
+            class="border border-success col-xs-1 col-sm-3 col-md-8 col-lg-6 col-xl-2 col-xxl-11"
+          >
+            Segun el tamaño de la pantalla
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p>Agregando Componentes</p>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+    <br />
+    <br />
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Default checkbox
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="flexCheckChecked"
+        checked
+      />
+      <label class="form-check-label" for="flexCheckChecked">
+        Checked checkbox
+      </label>
+    </div>
+    <br />
+
+    <br />
+    <p class="d-inline-flex gap-1">
+      <a
+        class="btn btn-primary"
+        data-bs-toggle="collapse"
+        href="#collapseExample"
+        role="button"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Link with href
+      </a>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Button with data-bs-target
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        Some placeholder content for the collapse component. This panel is
+        hidden by default but revealed when the user activates the relevant
+        trigger.
+      </div>
+    </div>
+    <br />
+    <br />
+    <button type="button" class="btn btn-primary">
+      Notifications <span class="badge text-bg-secondary">4</span>
+    </button>
+    <br />
+    <br />
+    <div class="vstack gap-2 col-md-5 mx-auto">
+      <button type="button" class="btn btn-secondary">Save changes</button>
+      <button type="button" class="btn btn-outline-secondary">Cancel</button>
+    </div>
+    <br />
+    <br />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
